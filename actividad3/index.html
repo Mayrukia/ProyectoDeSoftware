@@ -6,20 +6,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Actividad3</title>
 	<link rel="stylesheet" type="text/css" href="estilo.css" media="all">
-	<srcript src="miCodigo.js" type="text/javascript"></srcript>
+	<srcript src="C:\Users\mayci\Desktop\actividad3\miCodigo.js" type="text/javascript"></srcript>
 </head>
 <body>
 		<div id="main-container">	
 			<h2>Instrumentos</h2>
 			<table>
-				<colgroup span="3" class="columns"></colgroup>
 				<thead> 
 					<tr>
 						<th>Id</th><th>Tipo</th><th>Observaciones</th>
 					</tr>
 				</thead>
 				<tbody id="tabla"></tbody>
-				
 				<tr>
 				  <td>001</td><td>Violìn</td><td>En buen estado</td>
 				  
@@ -36,25 +34,28 @@
 
 		<div id="estilo-iden">
 			<p><b>Identificacion*</b></p>		
-			<input type="search" id="002" name="codigo">
+			<input type="search" id="id" name="codigo">
 			<button>Buscar</button>
 			
 			<p><b>Tipo*</b></p>	
-			<select name="select">
+			<select name="select" id="tipo">
+					<option value="" disabled selected>Seleccione un Tipo...</option>
 					<option value="value1">Piano</option> 
-					<option value="value2" selected>Tipo</option>
+					<option value="value2">Guitarra</option>
 					<option value="value3">Violìn</option>
 			 </select>
 
 		</div>
 		<div class="estilo-obs">
 					<p><b>Observaciones</b></p>
-					<input id="estilo-comment" type="text" name="comentario">
+					<textarea rows="4" cols="50" id="ob">
+						
+					</textarea>
+					<!-- <input id="estilo-comment" type="text" name="comentario"> -->
 		</div>
 		<div id="estilo-button">
-			<button id="btn_guardar" onclick="guardar()">Guardar</button><br><br>
-			<!--<button name="button">Aceptar</button>-->
-			<button name="button">Cancelar</button>
+			<button type="button" onclick="guardar()">Guardar</button>
+			<button type="button">Cancelar</button>
 		</div>
 		
 </body>
