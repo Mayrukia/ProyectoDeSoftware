@@ -1,5 +1,10 @@
+function cancelar(){
+    document.getElementById("id").reset;
+    document.getElementById("ob").reset;
+    document.getElementById("tipo").reset;
+}
+
 function guardar(){
-   
     var id=document.getElementById("id").value;
     var id=id.trim();
     var ob=document.getElementById("ob").value;
@@ -17,7 +22,7 @@ function guardar(){
         alert("Debe completar el campo observaciones!!");
         return false;
     }
-    if(tipo == "value2"){
+    if(tipo == ""){
         alert("Debe ingresar un tipo de artìculo, en el campo tipo");
         return false;
     }
@@ -42,7 +47,7 @@ function guardar(){
 
     for (i=0;i<tds.length;i++){
         if (tds[i].innerHTML == id){
-            alert("Ingresar id");
+            alert("Identificador repetido, ingrese un nuevo id");
             return false;
         }
     }
@@ -50,9 +55,5 @@ function guardar(){
     tabla.appendChild(fila);
     return false;
 
-   /* var fila="<tr><th>"+_id +"</th><th>"+_tipo +"</th><th>"+_ob +"</th></tr>";
-
-    var btn = document.createElement("TR");
-   	btn.innerHTML=fila;
-    document.getElementById("tabla").appendChild(btn);*/
+   
 }

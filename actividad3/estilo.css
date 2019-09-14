@@ -19,38 +19,27 @@ table{
     border-collapse: collapse;
 }
 
-th, td {
+td {
     border: solid 1px grey;
    padding: 20px;
 }
-
-thead{
-    background-color: royalblue;
-    color: white;
-    border-bottom: 5px black;
-    
+th{
+    border: 10px black;
 }
 tr:nth-child(even){
     background-color: rgb(184, 181, 181);
+    
 }
 
 tr:hover td{
     background-color: cornflowerblue;
-    color: white;
+    color:white;
 
 }
 
 #estilo-iden{
     margin: 10px auto;
     width: 800px;
-}
-.estilo-obs{
-    margin: 10px auto;
-    width: 800px;
-}
-
-#estilo-comment{
-    height: 150px
 }
 
 #estilo-button{
